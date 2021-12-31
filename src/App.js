@@ -1,13 +1,13 @@
-import { lazy } from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { Suspense } from 'react/cjs/react.production.min';
-import * as ROUTES from './constants/routes'
-import UserContext from './context/user';
-import useAuthListener from './hooks/use-auth-listener';
-const Login = lazy(() => import('./pages/login'));
-const Signup = lazy(() => import('./pages/sign-up'));
-const NotFound = lazy(() => import('./pages/not-found'));
-const Dashboard = lazy(() => import('./pages/dashboard'));
+import { lazy } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Suspense } from "react/cjs/react.production.min";
+import * as ROUTES from "./constants/routes";
+import UserContext from "./context/user";
+import useAuthListener from "./hooks/use-auth-listener";
+const Login = lazy(() => import("./pages/login"));
+const Signup = lazy(() => import("./pages/sign-up"));
+const NotFound = lazy(() => import("./pages/not-found"));
+const Dashboard = lazy(() => import("./pages/dashboard"));
 
 function App() {
   const { user } = useAuthListener();
